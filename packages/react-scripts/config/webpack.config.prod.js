@@ -184,7 +184,7 @@ module.exports = {
       // Process JS with Babel.
       {
         test: /\.(js|jsx)$/,
-        include: paths.appSrc,
+        include: [paths.appSrc, path.resolve(paths.appNodeModules, '@expo')],
         loader: require.resolve('babel-loader'),
         // @remove-on-eject-begin
         options: {
